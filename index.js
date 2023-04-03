@@ -32,5 +32,19 @@ function randomNum(max) {
     return Math.floor(Math.random() * (max+1) + 0)
 }
 
-console.log(dinoNames.length);
-console.log(randomNum(dinoNames.length));
+function textAssembly() {
+    let snipPos = 0; //randomNum(textSnips.length);
+    switch (snipPos) {
+        case 0:
+            const allDinos = herbivores.concat(carnivores);
+            let dinoPos = randomNum(allDinos.length);
+            // console.log("DINOPOS: " + dinoPos);
+            console.log(textSnips[snipPos] + allDinos[dinoPos]);
+            break;
+    }
+}
+
+textAssembly();
+
+// console.log(dinoNames.length);
+// console.log(randomNum(dinoNames.length));
